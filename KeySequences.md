@@ -1,6 +1,6 @@
 # The Key Sequences for Zowe TN3270
 
-When working in a mainframe environment, the user can become somewhat overwhelmed with the number of commands that can be used. Very often, in fact, commands are repeating. Some environments also have the retrieve function. But what if I need to repeat a series of commands. What if I'm required to hit enter or press tab between the commands? And what about changing the name of the dataset for another command? Such problems are common and various vendors use a range of techniques to enable finctionalities to address these problems.
+When working in a mainframe environment, the user can become somewhat overwhelmed with the number of commands that can be used. Very often, in fact, commands are repeating. Some environments also have the retrieve function. But what if I need to repeat a series of commands. What if I'm required to hit enter or press tab between the commands? And what about changing the name of the dataset for another command? Such problems are common and various vendors use a range of techniques to enable functionalities to address these problems.
 
 ## The Key Sequences
 
@@ -15,6 +15,10 @@ In the case of Zowe TN3270, this feature is called the **Key Sequences**, in whi
 
 ![image](https://github.com/Martin-Zeithaml/TN3270-Keys/assets/66114686/9abb1db1-d151-40d0-bb89-f405f8d9dd32)
 
+### Benefits
+* The definition is in JSON format which makes it easy to read, change and share. 
+* The Key Sequences is time saving feature, you can define repeating or complex commands
+* Developed as open software, new ideas for extending whis functionality are welcome!
 
 Let's go into a few examples and describe what's going on.
 
@@ -27,7 +31,7 @@ In the example of simple text, as a `SPUFI` user, it is necessary to type the pr
   ]
 }
 ```
-The `title` is visible on the Key Sequences bar and for the `description`, and there is hover help for that menu item whereby `SYSIBM.SYS` will be typed on the current cursor position.
+The `title` is visible on the Key Sequences bar and for the `description`, and there is hover help for that menu item whereby `SYSIBM.SYS` will be typed on the current cursor position. The behavior of this simple definition is like a clipboard. But you can define more items, which are always ready to use. 
 
 Note that Zowe TN3270 does not check if the current cursor position is editable.
 
@@ -53,7 +57,7 @@ We already know `title` and `description`, so let's focus on the rest of the key
   * There might, however, be a previous command, in which case it is better to delete the entire command line. 
 * Type `START` and hit `Enter`.
 
-<!-- I think you need to describe the end result and summarize the benefit. I don't see the purpose of this described. -->
+Such definition is very helpful, you can invoke it regardless on the cursor position and checking what is on the command line. The result will be always the same, new `ISPF` panel will be opened. 
 
 ### Prompt Example
 As a final example, let's use the `prompt` feature to get input and put it to use.
@@ -72,8 +76,8 @@ As a final example, let's use the `prompt` feature to get input and put it to us
 ```
 So, we already know `Home` and `Ctrl+E`.
 
-In this case, use `search for` to <!-- Explain what is being searched -->
-* `search for '` with opening single parenthesis
+In this case, use `ISPF` command `srchfor` to find text in all members in the current library
+* `srchfor '` with opening apostrophe
 * `prompt` is the default browser prompt with provided string
   * The input from this prompt is placed on the current cursor position
 * Closing `'` and `Enter`
@@ -81,6 +85,8 @@ In this case, use `search for` to <!-- Explain what is being searched -->
 Here's a Prompt example, which will produce `srchfor 'ZIIP'` and `Enter`:
 
 ![image](https://github.com/Martin-Zeithaml/TN3270-Keys/assets/66114686/d732aeb7-c12b-4eed-a7cf-e4d46d12d97d)
+
+This definition has couple benefits, you don't need to remember how to spell `ISPF` command `srchfor`. We are using user's input to create this simple query and by using opening and closing apostrophe, you don't need to worry about spaces (`srchfor` requires one string as a parameter; if such string contains space(s), it must be enclosed in apostrophes).
 
 ## Defaults and Location
 
