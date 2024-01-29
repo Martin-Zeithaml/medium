@@ -22,7 +22,7 @@ In the case of Zowe TN3270, this feature is called the **Key Sequences**, in whi
 
 Let's go into a few examples and describe what's going on.
 
-In the example of simple text, as a `SPUFI` user, it is necessary to type the prefix `SYSIBM.SYS` several times when writing your query. The definition for such key sequence could be:
+In the example of simple text, as a `SPUFI` user, it is necessary to type the prefix `SYSIBM.SYS` several times when writing your SQL query. The definition for such key sequence could be:
 ```
 {
   "title": "SYSIBM", "description": "TEXT: SYSIBM.SYS",
