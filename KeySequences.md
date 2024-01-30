@@ -1,10 +1,10 @@
 # The Key Sequences for Zowe TN3270
 
-When working in a mainframe environment, the user can become somewhat overwhelmed with the number of commands that can be used. Very often, in fact, commands are repeating. Some environments also have the retrieve function. But what if I need to repeat a series of commands. What if I'm required to hit enter or press tab between the commands? And what about changing the name of the dataset for another command? Such problems are common and various vendors use a range of techniques to enable functionalities to address these problems.
+When working in a mainframe environment, the user can become somewhat overwhelmed with the number of commands that can be used. Very often, in fact, commands are repeating. Some environments also have the retrieve function. But what if one needs to repeat a series of commands. What if when one is required to hit Enter or Tab between commands? And what about changing the name of the dataset for another command? Such workflow processes are common which has prompted various vendors to come up with a range of techniques to enable functionalities to address these user needs.
 
-## The Key Sequences
+## Introducting Key Sequences for Zowe TN3270
 
-In the case of Zowe TN3270, this feature is called the **Key Sequences**, in which the user can define the sequence of key strokes that apply to the following categories:
+In the case of Zowe TN3270, the feature to address these workflow requirements is refered to as **Key Sequences**. With Key Sequences, the user can define the sequence of key strokes that apply to the following categories:
 
 * Normal keys - `A`, `B`, ...
 * Key modifiers - `Ctrl`, `Alt`, `Shift`
@@ -16,11 +16,12 @@ In the case of Zowe TN3270, this feature is called the **Key Sequences**, in whi
 ![image](https://github.com/Martin-Zeithaml/TN3270-Keys/assets/66114686/9abb1db1-d151-40d0-bb89-f405f8d9dd32)
 
 ### Benefits
+There are a range of benefits to using these Key Sequences including the following:
 * The definition is in JSON format which makes it easy to read, change and share. 
-* The Key Sequences is time saving feature, you can define repeating or complex commands
-* Developed as open software, new ideas for extending whis functionality are welcome!
+* The Key Sequences is a time saving feature, whereby you can define repeating or complex commands.
+* Also, as Zowe is developed as an open-source solution, new ideas for extending this functionality are always welcome!
 
-Let's go into a few examples and describe what's going on.
+Let's go into a few examples of Key Sequences and describe what's going on.
 
 In the example of simple text, as a `SPUFI` user, it is necessary to type the prefix `SYSIBM.SYS` several times when writing your SQL query. The definition for such key sequence could be:
 ```
@@ -31,13 +32,13 @@ In the example of simple text, as a `SPUFI` user, it is necessary to type the pr
   ]
 }
 ```
-The `title` is visible on the Key Sequences bar and for the `description`, and there is hover help for that menu item whereby `SYSIBM.SYS` will be typed on the current cursor position. The behavior of this simple definition is like a clipboard. But you can define more items, which are always ready to use. 
+The `title` is visible on the Key Sequences bar and for the `description`. You can use the hover help for a menu of choices to choose from. In this case, `SYSIBM.SYS` is presented on the current cursor position. The behavior of this simple definition is like a clipboard. But you can define more items, which are readily available in the pop-up menu. 
 
 Note that Zowe TN3270 does not check if the current cursor position is editable.
 
 ### Start New ISPF Panel
 
-Another application is to start a new ISPF panel. When using `ISPF` environment, chances are you will be using commands such as `START`, `SWAP NEXT`, `P.3.4` and so on. This `ISPF START` example is extended to use special characters. 
+Another application of the Key Sequences feature is to start a new ISPF panel. When using the `ISPF` environment, one probably will be using commands such as `START`, `SWAP NEXT`, `P.3.4` and so on. This `ISPF START` example is extended to use special characters. 
 
 ```
 {
@@ -51,13 +52,13 @@ Another application is to start a new ISPF panel. When using `ISPF` environment,
 }
 ```
 We already know `title` and `description`, so let's focus on the rest of the keys:
-* The `Home` key is to get on the command line.
- This depends on your `ISPF` setting. In this example, let's suppose that the command line on the top
+* The `Home` key is to get you on the command line.
+ This depends on your `ISPF` setting. In this example, let's suppose that the command line is on the top. <!-- What does "command line is on the top" mean? Is this a useful piece of information? -->
 * `Ctrl+E` is a defined [keyboard shortcut](https://docs.zowe.org/stable/user-guide/mvd-3270/#keyboard-shortcuts) for Zowe TN3270 to clear from the current cursor position until the end of the field.
-  * There might, however, be a previous command, in which case it is better to delete the entire command line. 
+  * There might, however, be a previous command, in which case it is better to delete the entire command line. <!-- Describe how this is done. --> 
 * Type `START` and hit `Enter`.
 
-Such definition is very helpful, you can invoke it regardless on the cursor position and checking what is on the command line. The result will be always the same, new `ISPF` panel will be opened. 
+Having this definition <!-- What do you specifically mean by "definition"? --> can be very helpful, as you can invoke it regardless of the cursor position and check the text presented on the command line. The result will be always the same, and a new `ISPF` panel will be opened. 
 
 ### Prompt Example
 As a final example, let's use the `prompt` feature to get input and put it to use.
@@ -76,7 +77,7 @@ As a final example, let's use the `prompt` feature to get input and put it to us
 ```
 So, we already know `Home` and `Ctrl+E`.
 
-In this case, use `ISPF` command `srchfor` to find text in all members in the current library
+In this case, use the `ISPF` command `srchfor` to find text in all members in the current library:
 * `srchfor '` with opening apostrophe
 * `prompt` is the default browser prompt with provided string
   * The input from this prompt is placed on the current cursor position
@@ -86,7 +87,7 @@ Here's a Prompt example, which will produce `srchfor 'ZIIP'` and `Enter`:
 
 ![image](https://github.com/Martin-Zeithaml/TN3270-Keys/assets/66114686/d732aeb7-c12b-4eed-a7cf-e4d46d12d97d)
 
-This definition has couple benefits, you don't need to remember how to spell `ISPF` command `srchfor`. We are using user's input to create this simple query and by using opening and closing apostrophe, you don't need to worry about spaces (`srchfor` requires one string as a parameter; if such string contains space(s), it must be enclosed in apostrophes).
+This definition has couple benefits. First of all, you don't need to remember how to spell the `ISPF` command `srchfor`. Secondly, by using the user's input to create this simple query with the use of opening and closing apostrophes, you don't need to worry about spaces (`srchfor` requires one string as a parameter; if such string contains space(s), it must be enclosed in apostrophes).
 
 ## Defaults and Location
 
@@ -98,12 +99,12 @@ This definition has couple benefits, you don't need to remember how to spell `IS
   * `PF13` to `PF24`
 * Location of `_keySequences.json` file
   * There is a [hierarchy of directories](https://docs.zowe.org/stable/user-guide/mvd-configuration/#configuration-directories)
-  * For example for the user: `{zowe.workspaceDirectory}/app-server/users/{userID}/ZLUX/pluginStorage/org.zowe.terminal.tn3270/sessions`
+  * Example for the user: `{zowe.workspaceDirectory}/app-server/users/{userID}/ZLUX/pluginStorage/org.zowe.terminal.tn3270/sessions`
 * How to define keys
   * Corresponds to JavaScript [Event.key](https://www.toptal.com/developers/keycode)
 
 ## Example
-This example as `_keySequences.json`:
+The following example is for `_keySequences.json`:
 ```
 {
    "keySequences" :[
@@ -140,7 +141,7 @@ This example as `_keySequences.json`:
 ```
 ## Summary
 
-* Zowe TN3270 offers way to simplify repetitive actions in the form of **Key Sequences**, which can be defined by the user.
+* Zowe TN3270 offers a straight-forward way to simplify repetitive actions in the form of **Key Sequences**, which can be defined by the user to save time and improve the user's workflow. 
 
 ## Useful Links
 
