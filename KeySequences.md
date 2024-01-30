@@ -58,7 +58,7 @@ We already know `title` and `description`, so let's focus on the rest of the key
   * There might, however, be a previous command, in which case it is better to delete the entire command line using predefined keyboard shortcut `Ctrl+E`.
 * Type `START` and hit `Enter`.
 
-Having this key sequence definition can be very helpful, as you can invoke it regardless of the cursor position and check the text presented on the command line. The result will be always the same, and a new `ISPF` panel will be opened. 
+Having this key sequence definition can be very helpful, as you can invoke it regardless of the cursor position or the text presented on the command line. The result will be always the same, and a new `ISPF` panel will be opened. 
 
 ### Prompt Example
 As a final example, let's use the `prompt` feature to get input and put it to use.
