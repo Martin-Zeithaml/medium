@@ -1,6 +1,6 @@
 # The Key Sequences for Zowe TN3270
 
-When working in a mainframe environment, the user can become somewhat overwhelmed with the number of commands that can be used. Very often, in fact, commands are repeating. Some environments also have the retrieve function. But what if one needs to repeat a series of commands. What if when one is required to hit Enter or Tab between commands? And what about changing the name of the dataset for another command? Such workflow processes are common which has prompted various vendors to come up with a range of techniques to enable functionalities to address these user needs.
+When working in a mainframe environment, the user can become somewhat overwhelmed with the number of commands that can be used. Very often, in fact, commands are repeating. Some environments also have the retrieve function. But what if one needs to repeat a series of commands. What if when one is required to hit Enter or Tab between commands? And what about changing the name of the dataset for another command? Such workflow processes are common which has prompted various vendors to come up with a range of functionalities to address these user needs.
 
 ## Introducting Key Sequences for Zowe TN3270
 
@@ -32,7 +32,7 @@ In the example of simple text, as a `SPUFI` user, it is necessary to type the pr
   ]
 }
 ```
-The `title` is visible on the Key Sequences bar and for the `description`. You can use the hover help for a menu of choices to choose from. In this case, `SYSIBM.SYS` is presented on the current cursor position. The behavior of this simple definition is like a clipboard. But you can define more items, which are readily available in the pop-up menu. 
+The `title` is visible on the Key Sequences bar and for the `description`. You can use the hover help for a menu of choices to choose from. In this case, `SYSIBM.SYS` is presented on the current cursor position. The behavior of this simple definition is like a clipboard. Using Key Sequences, you can define more items, which are readily available in the pop-up menu. 
 
 Note that Zowe TN3270 does not check if the current cursor position is editable.
 
