@@ -53,12 +53,12 @@ Another application of the Key Sequences feature is to start a new ISPF panel. W
 ```
 We already know `title` and `description`, so let's focus on the rest of the keys:
 * The `Home` key is to get you on the command line.
- This depends on your `ISPF` setting. In this example, let's suppose that the command line is on the top. <!-- What does "command line is on the top" mean? Is this a useful piece of information? -->
+  * This depends on your `ISPF` setting. In this example, let's suppose that the command line is on the top. For other placements, you might need to alter the `Home` setting to get on the command line.
 * `Ctrl+E` is a defined [keyboard shortcut](https://docs.zowe.org/stable/user-guide/mvd-3270/#keyboard-shortcuts) for Zowe TN3270 to clear from the current cursor position until the end of the field.
-  * There might, however, be a previous command, in which case it is better to delete the entire command line. <!-- Describe how this is done. --> 
+  * There might, however, be a previous command, in which case it is better to delete the entire command line using predefined keyboard shortcut `Ctrl+E`.
 * Type `START` and hit `Enter`.
 
-Having this definition <!-- What do you specifically mean by "definition"? --> can be very helpful, as you can invoke it regardless of the cursor position and check the text presented on the command line. The result will be always the same, and a new `ISPF` panel will be opened. 
+Having this key sequence definition can be very helpful, as you can invoke it regardless of the cursor position and check the text presented on the command line. The result will be always the same, and a new `ISPF` panel will be opened. 
 
 ### Prompt Example
 As a final example, let's use the `prompt` feature to get input and put it to use.
@@ -104,6 +104,8 @@ This definition has couple benefits. First of all, you don't need to remember ho
   * Corresponds to JavaScript [Event.key](https://www.toptal.com/developers/keycode)
 
 ## Example
+We have explained three examples to introduce the basic principles of Key Sequences. You can use this knowledge to modify and extend your Key Sequences to meet your specific requirements.
+
 The following example is for `_keySequences.json`:
 ```
 {
@@ -141,7 +143,7 @@ The following example is for `_keySequences.json`:
 ```
 ## Summary
 
-* Zowe TN3270 offers a straight-forward way to simplify repetitive actions in the form of **Key Sequences**, which can be defined by the user to save time and improve the user's workflow. 
+Zowe TN3270 offers a straight-forward way to simplify repetitive actions in the form of **Key Sequences**, which can be defined by the user to save time and improve the user's workflow. 
 
 ## Useful Links
 
