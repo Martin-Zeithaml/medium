@@ -1,10 +1,10 @@
 # The Key Sequences for Zowe TN3270
 
-When working in a mainframe environment, the user can become somewhat overwhelmed with the number of commands that can be used. Very often, in fact, commands are repeating. Some environments also have the retrieve function. But what if one needs to repeat a series of commands. What if when one is required to hit Enter or Tab between commands? And what about changing the name of the dataset for another command? Such workflow processes are common which has prompted various vendors to come up with a range of functionalities to address these user needs.
+When working in a mainframe environment, the user can become somewhat overwhelmed with the number of commands that can be used. Very often, in fact, commands are repeating. Some environments also have the retrieve function. Developers familiar with working in a mainframe environment know that part of a regular workflow can be repeating a series of commands over and over again, often times requiring the developer to hit Enter or Tab between commands. And what about changing the name of the dataset for another command? Such workflow processes are common practice, which has prompted various vendors to come up with a range of functionalities to address these user needs.
 
 ## Introducting Key Sequences for Zowe TN3270
 
-In the case of Zowe TN3270, the feature to address these workflow requirements is refered to as **Key Sequences**. With Key Sequences, the user can define the sequence of key strokes that apply to the following categories:
+In the case of Zowe TN3270, the solution to addressing these workflow requirements can be found in the **Key Sequences** feature. With Key Sequences, the user can define the sequence of key strokes that apply to the following categories:
 
 * Normal keys - `A`, `B`, ...
 * Key modifiers - `Ctrl`, `Alt`, `Shift`
@@ -15,7 +15,7 @@ In the case of Zowe TN3270, the feature to address these workflow requirements i
 
 ![image](https://github.com/Martin-Zeithaml/TN3270-Keys/assets/66114686/9abb1db1-d151-40d0-bb89-f405f8d9dd32)
 
-### Benefits
+### The benefits of using Key Sequences
 There are a range of benefits to using these Key Sequences including the following:
 * The definition is in JSON format which makes it easy to read, change and share. 
 * The Key Sequences is a time saving feature, whereby you can define repeating or complex commands.
@@ -23,7 +23,9 @@ There are a range of benefits to using these Key Sequences including the followi
 
 Let's go into a few examples of Key Sequences and describe what's going on.
 
-In the example of simple text, as a `SPUFI` user, it is necessary to type the prefix `SYSIBM.SYS` several times when writing your SQL query. The definition for such key sequence could be:
+## Using Key Sequences with Simple Text
+
+In the example of simple text, as a `SPUFI` user, it is necessary to type the prefix `SYSIBM.SYS` several times when writing your SQL query. To address this, the user could define the key sequence like this:
 ```
 {
   "title": "SYSIBM", "description": "TEXT: SYSIBM.SYS",
@@ -32,7 +34,7 @@ In the example of simple text, as a `SPUFI` user, it is necessary to type the pr
   ]
 }
 ```
-The `title` is visible on the Key Sequences bar and for the `description`. You can use the hover help for a menu of choices to choose from. In this case, `SYSIBM.SYS` is presented on the current cursor position. The behavior of this simple definition is like a clipboard. Using Key Sequences, you can define more items, which are readily available in the pop-up menu. 
+The `title` is visible on the Key Sequences bar and for the `description`. The user can then hover to view the help menu which can present choices to choose from. In this case, `SYSIBM.SYS` is presented on the current cursor position. The behavior of this simple definition is like a clipboard. By using Key Sequences, you can define more options, which can be  readily available through the hovering pop-up menu. 
 
 Note that Zowe TN3270 does not check if the current cursor position is editable.
 
@@ -103,10 +105,10 @@ This definition has couple benefits. First of all, you don't need to remember ho
 * How to define keys
   * Corresponds to JavaScript [Event.key](https://www.toptal.com/developers/keycode)
 
-## Example
 We have explained three examples to introduce the basic principles of Key Sequences. You can use this knowledge to modify and extend your Key Sequences to meet your specific requirements.
 
-The following example is for `_keySequences.json`:
+For a final example, let's look at the full `_keySequences.json`:
+
 ```
 {
    "keySequences" :[
@@ -141,9 +143,9 @@ The following example is for `_keySequences.json`:
    ]
 }
 ```
-## Summary
+## Take-away from leveraging Key Sequences 
 
-Zowe TN3270 offers a straight-forward way to simplify repetitive actions in the form of **Key Sequences**, which can be defined by the user to save time and improve the user's workflow. 
+Zowe TN3270 offers a straightforward way to simplify repetitive actions in the form of **Key Sequences**, which can be defined by the user to save time and improve the user's workflow. 
 
 ## Useful Links
 
