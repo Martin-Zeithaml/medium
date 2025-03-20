@@ -126,11 +126,8 @@ This error is cause by wrong indentation of `security` section and it is not muc
 ### Editor with comments feature
 
 We can do the same edit with correct result. Many modern editors has a comment feature, which is able to comment or uncomment a code. The following demo is from the VScode, you will simply select the section and hit `Crtl+/`. This will uncomment the section, but entire section is move 2 characters to the left, which has the same indentation as `zowe.setup.dataset`, which is desired.
-```
-=================================
-GIF animation will be placed here
-=================================
-```
+
+![edit1](https://github.com/user-attachments/assets/adaaa61c-a1eb-45bc-bc6b-2c796a435c1a)
 
 ### Options in ISPF
 
@@ -138,11 +135,8 @@ Note: C language syntax is quite useful for YAML: the comments are treated as pr
 
 If you prefer the `ISPF` editor, you can achieve the same result with existing features of `ISPF` and your terminal application. In this example, we have used the line command (`((2`) to shift the text in a block by 2 characters left and then we have selected and deleted all the comment characters:
 
-```
-=========================================
-Another GIF animation will be placed here
-=========================================
-```
+![edit2](https://github.com/user-attachments/assets/0cfac6f0-107a-49f8-96ee-df503ddcb275)
+
 
 ### Own ISREDIT macro
 
@@ -208,8 +202,5 @@ end
 
 The usage is quite simple, you will use defined line command (`Y` in this case) to mark the lines and call the macro, which is named `YAML`:
 
-```
-=========================================
-Another GIF animation will be placed here
-=========================================
-```
+![edit3](https://github.com/user-attachments/assets/c3dcd75e-a7a1-4836-8776-e9b0b7dcffaa)
+
