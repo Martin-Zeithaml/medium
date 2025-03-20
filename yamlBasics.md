@@ -13,23 +13,18 @@ Let's demonstrate this on a simple example. Because of case sensitivity, this YA
 * `config.PROPERTY` containing a string `world`
 ```yaml
 config:
-    property: hello
-    PROPERTY: world
+  property: hello
+  PROPERTY: world
 ```
 
 ### Indentation sensitivity
 One of reason to use YAML is a need to make hierarchical config. This is very important concept with major consequences!
-We will reuse the previous example to demonstrate the indentation, as we know there is `config.property` and `config.PROPERTY`:
-```yaml
-config:
-    property: hello
-    PROPERTY: world
-```
+We will reuse the previous example to demonstrate the indentation, as we know there is defined `config.property` and `config.PROPERTY`:
 
-If we change the indentation of `PROPERTY`, we will get different object!
+If we change the indentation of `PROPERTY`, we will get different configuration.
 ```yaml
 config:
-    property: hello
+  property: hello
 PROPERTY: world
 ```
 It is better to explain it on the JSON, as it is using curly braces to enclose the objects:
@@ -115,7 +110,7 @@ Note: the `example-zowe.yaml` is prepared with default indentation of 2 spaces.
 
 ### Common mistake
 
-If you manually delete the comment character `#` starting at line `# security` to the last line, you will get this error, when try to use the config:
+If you manually delete just the comment character `#` starting at line `# security` to the last line, you will get this error, when try to use the config:
 ```
 /zowe/bin: ./zwe config validate -c ./medium-example.yaml
 ZWEL0318E - Couldn't parse file '/zowe/bin/medium-example.yaml': while parsing a block mapping at line 3, column 5, did not find expected key at line 30, column 6.
