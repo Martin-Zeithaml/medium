@@ -40,6 +40,34 @@ It is better to explain it on the JSON, as it is using curly braces to enclose t
 
 Now we have `config.property` and `PROPERTY` - in other words, we have moved to `PROPERTY` to the same level as `config`.
 
+### Indentation again
+
+Now it gets little bit complicated, the indentation is not strictly constant, it can vary. Following example shows, the `setup` has two another properties and each of them has a `debug`. Despite the different indentations, this is valid YAML.
+
+```yaml
+setup:
+  opt1:
+   debug: true
+  opt2:
+        debug: false
+```
+
+However adding new property means to honor current indentation as on this example:
+```yaml
+setup:
+  opt1:
+   debug: true
+   logFile: /dev/null
+  opt2:
+        debug: false
+        logFile: /dev/null
+```
+
+
+## Best practice
+
+The best practice is to always use 2 spaces, due to being the default value for many modern editors and ISPF editor. 
+
 ## How to effectively update example-zowe.yaml
 
 When installing and configuring Zowe, you need to prepare the YAML configuration. The easy practice is to take provided file `example-zowe.yaml` and start editing it. We will show some problems and tips & tricks on the following part of the config:
