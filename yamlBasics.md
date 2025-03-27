@@ -148,7 +148,7 @@ This error is cause by wrong indentation of `security` section and it is not muc
 
 ### Editor with comments feature
 
-We can do the same edit with correct result. Many modern editors has a comment feature, which is able to comment or uncomment a code. The following demo is from the VScode, you will simply select the section and hit `Crtl+/`. This will uncomment the section, but entire section is move 2 characters to the left, which has the same indentation as `zowe.setup.dataset`, which is desired.
+We can do the same edit with correct result. Many modern editors has a comment feature, which is able to comment or uncomment a code. The following demo is from the VScode, you will simply select the section and hit `Ctrl+/`. This will uncomment the section, but entire section is move 2 characters to the left, which has the same indentation as `zowe.setup.dataset`, which is desired.
 
 ![edit1](https://github.com/user-attachments/assets/adaaa61c-a1eb-45bc-bc6b-2c796a435c1a)
 
