@@ -173,7 +173,7 @@ You can write ISREDIT macro to manipulate the text, for example:
 /*   Y, YY or Yn to mark start and end.                               */
 /*   Then type YAML command.                                          */
 /*                                                                    */
-/*   Expected: This in SYSEXEC                                        */
+/*   Expected: This in SYSEXEC(YAML)                                  */
 /*                                                                    */
 /*--------------------------------------------------------------------*/
 address ISREDIT
